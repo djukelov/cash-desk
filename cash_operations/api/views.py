@@ -81,7 +81,7 @@ class CashOperationsView(APIView):
 
                 with open('transaction_history.txt', 'a') as f:
                     if (request.data.get('operation_currency') == 'BGN'):
-                        f.write(f"{formatted_date} - ID:{transaction_id}, Operation:{request.data.get('operation_type').upper()}, Currency:{request.data.get('operation_currency')}, User:{user.upper()}\n")
+                        f.write(f"{formatted_date} - ID:{transaction_id}, Operation:{request.data.get('operation_type').upper()}, Currency:{request.data.get('operation_currency')}, Amount:{request.data.get('bgn_amount')}, User:{user.upper()}\n")
                     if (request.data.get('operation_currency') == 'EUR'):
                         f.write(f"{formatted_date} - ID:{transaction_id}, Operation:{request.data.get('operation_type').upper()}, Currency:{request.data.get('operation_currency')}, Amount:{request.data.get('eur_amount')}, User:{user.upper()}\n")
             except IOError as e:

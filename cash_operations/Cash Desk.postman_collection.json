@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "9dfe541c-e0d8-4990-ba10-a8c008f9f280",
+		"name": "Cash Desk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37739431"
+	},
+	"item": [
+		{
+			"name": "Withdrawal 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c8cab60a4b7f7ccf1c813b18569fe981473a6c6",
+						"description": "Implemented security token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_type\": \"withdraw\",\r\n  \"operation_currency\": \"BGN\",\r\n  \"bgn_amount\": 100,\r\n  \"bgn_10\": 5,\r\n  \"bgn_50\": 1,\r\n  \"eur_amount\": 0,\r\n  \"eur_10\": 0,\r\n  \"eur_20\": 0,\r\n  \"eur_50\": 0,\r\n  \"user_id\": 1,\r\n  \"cash_desk_id\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cash-operation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdrawal 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c8cab60a4b7f7ccf1c813b18569fe981473a6c6",
+						"description": "Implemented security token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_type\": \"withdraw\",\r\n  \"operation_currency\": \"EUR\",\r\n  \"bgn_amount\": 0,\r\n  \"bgn_10\": 0,\r\n  \"bgn_50\": 0,\r\n  \"eur_amount\": 500,\r\n  \"eur_10\": 0,\r\n  \"eur_20\": 0,\r\n  \"eur_50\": 10,\r\n  \"user_id\": 1,\r\n  \"cash_desk_id\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cash-operation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c8cab60a4b7f7ccf1c813b18569fe981473a6c6",
+						"description": "Implemented security token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_type\": \"deposit\",\r\n  \"operation_currency\": \"BGN\",\r\n  \"bgn_amount\": 600,\r\n  \"bgn_10\": 10,\r\n  \"bgn_50\": 10,\r\n  \"eur_amount\": 0,\r\n  \"eur_10\": 0,\r\n  \"eur_20\": 0,\r\n  \"eur_50\": 0,\r\n  \"user_id\": 1,\r\n  \"cash_desk_id\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cash-operation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c8cab60a4b7f7ccf1c813b18569fe981473a6c6",
+						"description": "Implemented security token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_type\": \"deposit\",\r\n  \"operation_currency\": \"EUR\",\r\n  \"bgn_amount\": 0,\r\n  \"bgn_10\": 0,\r\n  \"bgn_50\": 0,\r\n  \"eur_amount\": 200,\r\n  \"eur_10\": 0,\r\n  \"eur_20\": 5,\r\n  \"eur_50\": 2,\r\n  \"user_id\": 1,\r\n  \"cash_desk_id\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cash-operation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cash desk balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c8cab60a4b7f7ccf1c813b18569fe981473a6c6",
+						"description": "Implemented security token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cash_desk_id\":6,\r\n  \"user_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cash-balance",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cash-balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
